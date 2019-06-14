@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+    - .:/app
+    ports:
+    - "80:80"
+    command: ['python', '-m', 'http.server', '80', '--bind', '0.0.0.0']
